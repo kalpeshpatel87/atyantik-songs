@@ -196,10 +196,6 @@ export default function App() {
     <div className="stage">
       <div className="topbar">
         <div className="clock">{clock}</div>
-        <div className="status-pill">
-          <span className="status-dot" />
-          ON ROAD
-        </div>
         <a className="yt-link" href={PLAYLIST_URL} target="_blank" rel="noopener noreferrer">
           YouTube
         </a>
@@ -207,17 +203,9 @@ export default function App() {
 
       <div className="title-block">
         <h1>
-          HORN OK<span className="accent">PLEASE</span>
+          All Time Favourite of<span className="accent">Atyantik</span>
         </h1>
-        <div className="hindi-sub">रास्ते बोलते हैं</div>
-      </div>
-
-      <div className="horn-zone">
-        <button className={`wheel-btn${honking ? ' honking' : ''}`} onClick={pressHorn} aria-label="Press the horn">
-          <span key={ringKey} className="wheel-ring pulseit" />
-          <img src="/steering-wheel.webp" alt="Horn OK Please steering wheel" />
-        </button>
-        <div className="press-label">PRESS THE HORN</div>
+        <div class="hindi-sub">Kalpesh Patel</div>
       </div>
 
       <div className="player-wrap">
@@ -260,10 +248,6 @@ export default function App() {
             <span className="time">{fmtTime(duration)}</span>
           </div>
         </div>
-        <button className={`engine-btn${isPlaying ? ' on' : ''}`} onClick={pressEngine}>
-          <span className="engine-dot" />
-          <span>{isPlaying ? 'ENGINE RUNNING' : 'START ENGINE'}</span>
-        </button>
       </div>
 
       <div id="yt-hidden-player" ref={playerElRef} />
